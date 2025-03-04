@@ -28,7 +28,7 @@ const getWorkHours = () => {
         return 0;
     }
   };
-  
+
   console.log(getWorkHours());
   // UC4
 const calculateMonthlyWage = () => {
@@ -39,7 +39,7 @@ const calculateMonthlyWage = () => {
     return totalWage;
   }
   console.log(calculateMonthlyWage());
-  
+
 // UC5
 const calculateWagesTillCondition = () => {
     let totalWage = 0, totalHours = 0, daysWorked = 0;
@@ -51,7 +51,7 @@ const calculateWagesTillCondition = () => {
     }
     return { totalWage, totalHours, daysWorked };
   };
-  
+
   console.log(calculateWagesTillCondition());
 
 
@@ -76,7 +76,7 @@ const dailyWageOperations = () => {
     const allFullTime = dailyWages.every((wage) => wage === 160);
     const anyPartTime = dailyWages.some((wage) => wage === 80);
     const daysWorked = dailyWages.length;
-  
+
     return {
       totalWage,
       dayWages,
@@ -135,23 +135,27 @@ console.log(dailyWorkData);
 
 // UC11
 const workDayOperations = () => {
-    let totalWage = 0,
-      totalHours = 0;
-    dailyWorkData.forEach((work) => {
-      totalWage += work.wageEarned;
-      totalHours += work.hoursWorked;
-    });
-    const fullWorkDays = dailyWorkData.filter((work) => work.hoursWorked === 8);
-    const partWorkDays = dailyWorkData
-      .map((work) => (work.hoursWorked === 4 ? `Day ${work.day}` : ""))
-      .filter((day) => day !== "");
-    const noWorkDays = dailyWorkData
-      .map((work) => (work.hoursWorked === 0 ? `Day ${work.day}` : ""))
-      .filter((day) => day !== "");
-  
-    return { totalWage, totalHours, fullWorkDays, partWorkDays, noWorkDays };
-  };
+  let totalWage = 0,
+    totalHours = 0;
+  dailyWorkData.forEach((work) => {
+    totalWage += work.wageEarned;
+    totalHours += work.hoursWorked;
+  });
+  const fullWorkDays = dailyWorkData.filter((work) => work.hoursWorked === 8);
+  const partWorkDays = dailyWorkData
+    .map((work) => (work.hoursWorked === 4 ? `Day ${work.day}` : ""))
+    .filter((day) => day !== "");
+  const noWorkDays = dailyWorkData
+    .map((work) => (work.hoursWorked === 0 ? `Day ${work.day}` : ""))
+    .filter((day) => day !== "");
 
-  console.log( workDayOperations);
+  return { totalWage, totalHours, fullWorkDays, partWorkDays, noWorkDays };
+};
 
-  console.log( workDayOperations);
+// Corrected part: calling the function instead of just referencing it
+console.log(workDayOperations());
+
+// UC12
+
+let employeeData = { id: 1, name: "John", salary: 3000 };
+console.log(employeeData);
