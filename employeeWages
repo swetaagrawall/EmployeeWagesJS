@@ -104,7 +104,6 @@ const storeWageInMap = () => {
 storeWageInMap();
 console.log(dailyWageMap);
 
-<<<<<<< HEAD
 
 
 // UC9
@@ -133,7 +132,7 @@ const storeDailyWorkData = () => {
 
 storeDailyWorkData();
 console.log(dailyWorkData);
-=======
+
 // UC11
 const workDayOperations = () => {
     let totalWage = 0,
@@ -154,4 +153,5 @@ const workDayOperations = () => {
   };
 
   console.log( workDayOperations);
->>>>>>> uc11_objectOperation
+
+  console.log( workDayOperations);
