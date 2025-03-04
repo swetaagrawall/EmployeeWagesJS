@@ -159,3 +159,19 @@ console.log(workDayOperations());
 
 let employeeData = { id: 1, name: "John", salary: 3000 };
 console.log(employeeData);
+
+
+
+
+// UC13
+const validateName = (name) => {
+  const pattern = /^[A-Z][a-z]{2,}$/;
+  try {
+    if (!pattern.test(name)) throw "Invalid name format";
+    return true;
+  } catch (error) {
+    return error;
+  }
+};
+
+console.log(validateName("John"));
